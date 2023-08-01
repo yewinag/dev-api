@@ -199,11 +199,7 @@ export class CouponRespository {
             noOfCoupons: 1,
             status: { $cond: ['$status', '$status', false] },
             redemeedDate: new Date(),
-<<<<<<< Updated upstream
-            noOfUsedCoupons: { $size: '$coupons' },
-=======
             noOfUsedCoupons: { $cond: ['$noOfCoupons', 0, 0] },
->>>>>>> Stashed changes
           },
         },
         {
