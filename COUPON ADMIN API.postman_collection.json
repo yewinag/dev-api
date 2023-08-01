@@ -1,0 +1,1103 @@
+{
+	"info": {
+		"_postman_id": "8eb7aede-7a3f-43e8-9004-fc3973acb6ca",
+		"name": "COUPON ADMIN API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5324632"
+	},
+	"item": [
+		{
+			"name": "Admin user",
+			"item": [
+				{
+					"name": "Get ALL Admin Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/admin/get?page=1&limit=10&search=kyawzin@admin&searchColumn=email&startDate=2023-04-29T14:08:18.137Z&endDate=2023-04-30T14:08:18.137Z",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"admin",
+								"get"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "kyawzin@admin"
+								},
+								{
+									"key": "searchColumn",
+									"value": "email"
+								},
+								{
+									"key": "startDate",
+									"value": "2023-04-29T14:08:18.137Z"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-04-30T14:08:18.137Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Admin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/admin/get/:userId",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"admin",
+								"get",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "643d5ff1b12d94ea8a10a4ac"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kyaw Zin Normal Admin\",\r\n    \"email\": \"kyawzin@normal.com\",\r\n    \"userRole\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{awshost}}/admin/create",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"admin",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kyaw Zin Thant\",\r\n    \"email\": \"kyawzin@admin.com\",\r\n    \"userRole\": \"SUPER\",\r\n    \"status\": false,\r\n    \"password\":\"admin@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{awshost}}/admin/update/:userId",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"admin",
+								"update",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "643d5ff1b12d94ea8a10a4ac"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@admin.com\",\r\n    \"password\":\"user@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{awshost}}/admin/login",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Get ALL Clients",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDRmNzE4MTJjM2U2ZmE5OGU3ODlmNDQiLCJ1c2VyUm9sZSI6IkFETUlOIiwiaWF0IjoxNjgyOTI4MjIyfQ.DHzkTnYC7RHYrTe11YC7yy9Zcn-yzY657NkXo9mU8DQCfFSzZH-9uNInU0KbLQHGUFgETG80_roSArFSy_gV2eMjwfI-L0Ge1QjDmZZqXawroLDb--UVJAPTKrkQkNwyTi6XQRezuJw4Te21BEjxoVWDibKJMLAK7u4kr2Zws0bwipdg7Pv3npvBIToqXm2iXLj__ahxAKwYGsyJQNTHID-RcIPfPr1e_kjt__KX0xpEmEsxYfQXao45UU5OJgUAzEmJwJtQqhLBZGBE-Qebc-o5YGBV9c-PMR7p8Ci5JVT7GWtlKlFazJkJuE8QXq3O8ROUksSZ9IH_NHgysTsG9u5lxLf5zyAFWeZH4Ju9Vowc1Jf7N8_FkiGbRAvQO_l_QNiLi2Ju_hd44Q-CYJ4guuAlhHl-EJvDYqrj9q6o3BTY3WP4iAIRrM5AdrJMi27GlMIU-LzgRcDn88_M1ydJR_loDWVrZ3kQBQEWD6wTxP9-0vaA4lTDhwR1fWYPhIqBaqM4VWlFrP2R9kIYLEl5MKdo8lLMng-cOyUg9wbcMukL4mCvAp3hTEaLptDZWkYSSgUdPE_WUo_GMJukl85EOiD1GqVFMWUHsRMnEIpF570HVm8F1EGubJxfsZNo59F6x13IzwZFmuUeJIl1erVIbNXpugvZt4T1cwrn9DCRgu0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/client/get?page=1&limit=10&startDate=2023-04-01T14:08:18.137Z&endDate=2023-04-30T14:08:18.137Z&search=hla",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"client",
+								"get"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "startDate",
+									"value": "2023-04-01T14:08:18.137Z"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-04-30T14:08:18.137Z"
+								},
+								{
+									"key": "search",
+									"value": "hla"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Client",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/client/get/:userId",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"client",
+								"get",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "645292fc2d911c558886062d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client By Phone Number",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/client/get-client-by-phone/:phoneNumber",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"client",
+								"get-client-by-phone",
+								":phoneNumber"
+							],
+							"variable": [
+								{
+									"key": "phoneNumber",
+									"value": "09258880376"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hla Hla 23\",\r\n    \"phoneNumber\": \"09258880379\",\r\n    \"pragrancyStatus\": true,\r\n    \"age\": 29,\r\n    \"noOfChildren\": 1,\r\n    \"geastralMonth\": 2,\r\n    \"regionId\": \"64528990a4d177c83d38e986\",\r\n    \"stateId\": \"64528990a4d177c83d38e9c0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{awshost}}/client/create",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"client",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hla Hla 23\",\r\n    \"phoneNumber\": \"09258880379\",\r\n    \"age\": 29,\r\n    \"dateOfBirth\": \"1994-05-03T16:59:40.792Z\",\r\n    \"pragrancyStatus\": true,\r\n    \"noOfChildren\": 1,\r\n    \"geastralMonth\": 2,\r\n    \"status\": true,\r\n    \"regionId\": \"64528990a4d177c83d38e986\",\r\n    \"stateId\": \"64528990a4d177c83d38e9c0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{awshost}}/client/update/:userId",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"client",
+								"update",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "645292fc2d911c558886062d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coupon",
+			"item": [
+				{
+					"name": "Get ALL Coupon Families",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/coupon/family/get?page=1&limit=10",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"coupon",
+								"family",
+								"get"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Autocomplete Program",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/coupon/autocomplete/program/:programName",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"coupon",
+								"autocomplete",
+								"program",
+								":programName"
+							],
+							"variable": [
+								{
+									"key": "programName",
+									"value": "Preg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Autocomplete Service",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/coupon/autocomplete/service/:serviceName",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"coupon",
+								"autocomplete",
+								"service",
+								":serviceName"
+							],
+							"variable": [
+								{
+									"key": "serviceName",
+									"value": "Xray"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Redemeed Coupon Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/coupon/redemeed-info",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"coupon",
+								"redemeed-info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export Redemeed Coupon Info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/coupon/export-redemeed-info",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"coupon",
+								"export-redemeed-info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Coupon Family",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/coupon/family/get/:couponFamilyId?page=1&limit=10&search=Preg&searchColumn=programName&stateId=64528990a4d177c83d38e9c0&regionId=64528990a4d177c83d38e986&couponStatus=ACTIVE,EXPIRED,REDEMEED&redemeedStatus=false",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"coupon",
+								"family",
+								"get",
+								":couponFamilyId"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "Preg"
+								},
+								{
+									"key": "searchColumn",
+									"value": "programName"
+								},
+								{
+									"key": "stateId",
+									"value": "64528990a4d177c83d38e9c0"
+								},
+								{
+									"key": "regionId",
+									"value": "64528990a4d177c83d38e986"
+								},
+								{
+									"key": "couponStatus",
+									"value": "ACTIVE,EXPIRED,REDEMEED"
+								},
+								{
+									"key": "redemeedStatus",
+									"value": "false"
+								}
+							],
+							"variable": [
+								{
+									"key": "couponFamilyId",
+									"value": "64606b36275add3e6e3e289d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Coupon Family by Service Name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/coupon/family/search/:serviceName",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"coupon",
+								"family",
+								"search",
+								":serviceName"
+							],
+							"variable": [
+								{
+									"key": "serviceName",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Coupon Family",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"familyName\":\"Family_One\",\r\n    \"programName\": \"Preg\",\r\n    \"serviceName\": \"Chceck XRay\",\r\n    \"noOfCoupons\": 10,\r\n    \"programId\": null,\r\n    \"serviceId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/coupon/family/create",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"coupon",
+								"family",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"couponFamilyId\": \"64606b36275add3e6e3e289d\",\r\n    \"clinicId\": \"644bc66b8a8e08c3f22a6695\",\r\n    \"validFrom\": \"2023-04-27T04:28:03.630Z\",\r\n    \"validTo\": \"2023-06-27T04:28:03.630Z\",\r\n    \"userId\": \"645292fc2d911c558886062d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/coupon/generate",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"coupon",
+								"generate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Coupon Status Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"INACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{awshost}}/coupon/update/couponStatus/:couponId",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"coupon",
+								"update",
+								"couponStatus",
+								":couponId"
+							],
+							"variable": [
+								{
+									"key": "couponId",
+									"value": "645297d6f734ab8e4367739d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clinic",
+			"item": [
+				{
+					"name": "Get ALL Clinics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/clinic/get?page=1&limit=10",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"clinic",
+								"get"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "TH",
+									"disabled": true
+								},
+								{
+									"key": "startDate",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "endDate",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Clinic",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awshost}}/clinic/get/:clinicId",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"clinic",
+								"get",
+								":clinicId"
+							],
+							"variable": [
+								{
+									"key": "clinicId",
+									"value": "644bc66b8a8e08c3f22a6695"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Clinic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNmM2FiYjgxNTJjNTNjOGM1NWM4ZTQiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgzNTYyNjIzLCJleHAiOjE2ODM2NDkwMjN9.ab-onCugazsPjOWc3JVNZ4gZF_zcMtREl1kaWdU9btHP05RZRA3vTwKEhtrpDufNwn8AT3Kyu9KE9ioQptNb7BCG0I8bUEJPIumtv2s6ILaFwjsXCvTPl85q_3Vt2f2kPiT6M2V60R5vtutJfjk6Ymw8fUW_bXWMSL4xpDdGuA_KvmlUF23hq1NqcXD0dcUj6dDyubs7e5T8FlUHW6eGx93foFzCUzk14lwpd4oanNg7EIs9hi9kLiLZN_onJBC93010kTpJrqb2qfxT4X9JYzkLXQCnWlEbZeUq4P_6a4qukZIM9oaNMAO2oAHWqktwRWJxSnd5tpb_HJn_qWIn17ZDlA1WhC5THWADcaZF0z_ZrPuOimx4TnP6KvCfyv5Hzz86BXvgSvhrXFMtvwmS0C-QctRNfhRgT-vS4Cr_hBa_KYli6jaIX1LeBEoZOifWDBiB48hUlXMclFbDAY4QsoeMN09DX9bbWjjnlhwnP3nedET0h-9qQq9Jjg3jlhyCR3cEyWlg38FeULWijgDhaG0Z7Pg4yAW-pPzhNJxlzyWZ8U8wr7X_UXGfs8ilEojnn4bDeEOXy9rTLSaDrFEJwdRIVLn5w4UNYZwJ0Z2sewwYoRXH3hJsMQPZDhZUPhZ2jifvA59VjUH8gdPpaDgGE5m4NybQy_U04KxJB2urGqk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clinicName\": \"GGEZ\",\r\n    \"phoneNumber\": \"091234567810\",\r\n    \"email\": \"ggez@gg.com\",\r\n    \"clinicJoinDate\": \"2023-04-27T04:28:03.630Z\",\r\n    \"doctors\": [\r\n        {\r\n            \"name\": \"Kyaw Kyaw\",\r\n            \"samaId\": \"MBBS12345\",\r\n            \"gender\": \"Male\",\r\n            \"academicTitle\": \"MBBS\",\r\n            \"medicalDegree\": \"MBBS\",\r\n            \"phoneNumber\": \"0912345\",\r\n            \"status\":true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{awshost}}/clinic/create",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"clinic",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Clinic",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNmM2FiYjgxNTJjNTNjOGM1NWM4ZTQiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgzNTYyNjIzLCJleHAiOjE2ODM2NDkwMjN9.ab-onCugazsPjOWc3JVNZ4gZF_zcMtREl1kaWdU9btHP05RZRA3vTwKEhtrpDufNwn8AT3Kyu9KE9ioQptNb7BCG0I8bUEJPIumtv2s6ILaFwjsXCvTPl85q_3Vt2f2kPiT6M2V60R5vtutJfjk6Ymw8fUW_bXWMSL4xpDdGuA_KvmlUF23hq1NqcXD0dcUj6dDyubs7e5T8FlUHW6eGx93foFzCUzk14lwpd4oanNg7EIs9hi9kLiLZN_onJBC93010kTpJrqb2qfxT4X9JYzkLXQCnWlEbZeUq4P_6a4qukZIM9oaNMAO2oAHWqktwRWJxSnd5tpb_HJn_qWIn17ZDlA1WhC5THWADcaZF0z_ZrPuOimx4TnP6KvCfyv5Hzz86BXvgSvhrXFMtvwmS0C-QctRNfhRgT-vS4Cr_hBa_KYli6jaIX1LeBEoZOifWDBiB48hUlXMclFbDAY4QsoeMN09DX9bbWjjnlhwnP3nedET0h-9qQq9Jjg3jlhyCR3cEyWlg38FeULWijgDhaG0Z7Pg4yAW-pPzhNJxlzyWZ8U8wr7X_UXGfs8ilEojnn4bDeEOXy9rTLSaDrFEJwdRIVLn5w4UNYZwJ0Z2sewwYoRXH3hJsMQPZDhZUPhZ2jifvA59VjUH8gdPpaDgGE5m4NybQy_U04KxJB2urGqk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clinicName\": \"TH hospital\",\r\n    \"phoneNumber\": \"0912345678\",\r\n    \"email\": \"th@th.com\",\r\n    \"clinicJoinDate\": \"2023-04-27T04:28:03.630Z\",\r\n    \"doctors\": [\r\n        {\r\n            \"name\": \"Kyaw Kyaw\",\r\n            \"samaId\": \"MBBS12345\",\r\n            \"gender\": \"Male\",\r\n            \"academicTitle\": \"MBBS\",\r\n            \"medicalDegree\": \"MBBS\",\r\n            \"phoneNumber\": \"0912345\",\r\n            \"status\": false\r\n        },\r\n        {\r\n            \"name\": \"Ye WIN\",\r\n            \"samaId\": \"MBBS12346\",\r\n            \"gender\": \"Male\",\r\n            \"academicTitle\": \"MBBS\",\r\n            \"medicalDegree\": \"MBBS\",\r\n            \"phoneNumber\": \"09123456\",\r\n            \"status\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{awshost}}/clinic/update/:clinicId",
+							"host": [
+								"{{awshost}}"
+							],
+							"path": [
+								"clinic",
+								"update",
+								":clinicId"
+							],
+							"variable": [
+								{
+									"key": "clinicId",
+									"value": "644bc66b8a8e08c3f22a6695"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "patient-coupon-count-info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/dashboard/patient-coupon-count-info",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"dashboard",
+								"patient-coupon-count-info"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "TH",
+									"disabled": true
+								},
+								{
+									"key": "startDate",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "endDate",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coupon-info-graph",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/dashboard/coupon-info-graph",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"dashboard",
+								"coupon-info-graph"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-info-age-group",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/dashboard/client-info-age-group",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"dashboard",
+								"client-info-age-group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clinic-count-graph",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/dashboard/clinic-count-graph",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"dashboard",
+								"clinic-count-graph"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Regions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{awshost}}/region/get",
+					"host": [
+						"{{awshost}}"
+					],
+					"path": [
+						"region",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get State By RegionId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNWZmMWIxMmQ5NGVhOGExMGE0YWMiLCJ1c2VyUm9sZSI6IlNVUEVSIiwiaWF0IjoxNjgxODIzNzYyfQ.D_Ed1B8_4aSWXPbOVFX995bD_TEvXIgB_vTUTbnaIyD5fTmVeuHL7lUz4E_hezpnGaIfOY6_sRpNMTkeWw2oZIQqTgkgF-5E9snmpoX7Jqj-FsFLaFSKSg4QPiSmzo4Lm3TZHplCHmxsw69pYcnH618TmWHRcmowVmQfvJqdVuDPpTYdBLdwsaKGLyeUCuS6wjdXoBQJPcpnGDyDzdX7EeCW7eYkyZ9kGG2FGcWBmVCS_sm4GEa_PFiFE_RWNG1o7B81ET2tc1KkYLN_5JGqg1RsIhcka1W9hP7Nk6ow9qduI4Kal-Q-Csj67rwApcJGx3UHfkFt5jo3ItG7biA7GVm_mC3AybBJu7fC3nTlZk0ectxo-Q5kcdqu6KFV7bBqet_zwWcxktDb5BpaM-L2dEZ6HvD2vQYGr6FT1648v71r0Q1S0CJI5XM2WgX2Ug9UgnJ7zZP8UbyAbb3PFfp8Z5uMxq2a_2_0hSiDKxbaEGTsOREyXdRKy9aLoCB7mAYcI_eg_i4zqPMBUkJLN23td5Ov6an8K2sGyvRs2utSaZgeOk6wfTKY3wxG6bE3Y81nkzfDJOV_3nLBB7-SNFpfJ1e1xt0aBBA1U4HrprD3CuXuxHP0jXQDoFsp7x1dI2jOxcVigW5qU_FTKXzn-Q9wEuw9obXWOrBraUaSImdcqo8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{awshost}}/region/state/:regionId",
+					"host": [
+						"{{awshost}}"
+					],
+					"path": [
+						"region",
+						"state",
+						":regionId"
+					],
+					"variable": [
+						{
+							"key": "regionId",
+							"value": "64528990a4d177c83d38e986"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "awshost",
+			"value": "https://miniai.store",
+			"type": "string"
+		}
+	]
+}
